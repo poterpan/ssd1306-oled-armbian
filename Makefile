@@ -6,9 +6,9 @@ OBJS := $(SOURCES:.c=.o)
 CPPFLAGS := -I SSD1306_OLED_Library -I I2C_Library -I cJSON
 CFLAGS := -g
 
-ssd: $(OBJS)
+ssd_oled: $(OBJS)
 	$(CC) $^ -o $@
 
 clean:
-	rm -rf ssd $(OBJS)
+	rm -rf ssd_oled $(OBJS)
 

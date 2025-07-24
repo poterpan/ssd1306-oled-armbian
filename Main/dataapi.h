@@ -17,7 +17,28 @@
 #define	DefaultI2cDev	"/dev/i2c-0"			//驱动文件地址
 #define DefaultConfig	"/etc/oled/config.json"	//配置文件地址
 #define TempPath		"/sys/class/thermal/thermal_zone0/temp"	//配置文件地址
-#define FreqPath		"cat /sys/devices/system/cpu/cpu[04]/cpufreq/cpuinfo_cur_freq"
+#define FreqPath		"cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq"
+#define Cpuload		    "top -bn1 | awk '/%Cpu\\(s\\)/{printf 100-$8}'"      //空闲CPU
+#define TotMem		    "free -m | awk '/Mem:/{print $2}'"
+#define UseMem		    "free -m | awk '/Mem:/{print $3}'"
+#define MemPer		    "free -m | awk '/Mem:/{printf ($3)/$2*100}'"
+#define TotEmmc		    "df / | tail -1 | awk '{print $2}'"
+#define UseEmmc		    "df / | tail -1 | awk '{print $3}'"
+#define EmmcPer		    "df / | tail -1 | awk '{printf ($3)/$2*100}'"
+
+#define TotSda		    "df | awk '/sda/{printf ($2)/1048576}'"
+#define UseSda		    "df | awk '/sda/{printf ($3)/1048576}'"
+#define SdaAva	        "df | awk '/sda/{printf ($4)/1048576}'"
+#define SdaPer		    "df | awk '/sda/{printf ($3)/$2*100}'"
+#define TotSdb		    "df | awk '/sdb/{printf ($2)/1048576}'"
+#define UseSdb		    "df | awk '/sdb/{printf ($3)/1048576}'"
+#define SdbAva	        "df | awk '/sdb/{printf ($4)/1048576}'"
+#define SdbPer		    "df | awk '/sdb/{printf ($3)/$2*100}'"
+/* 使用 /sys/class/net 替代 ifconfig */
+#define RxEth0		    "cat /sys/class/net/eth0/statistics/rx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
+#define TxEth0		    "cat /sys/class/net/eth0/statistics/tx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
+#define RxWlan		    "cat /sys/class/net/wlan0/statistics/rx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
+#define TxWlan		    "cat /sys/class/net/wlan0/statistics/tx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
 #define BUFFSIZE		200
 
 /* 可用分辨率 */
