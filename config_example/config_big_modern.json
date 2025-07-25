@@ -87,7 +87,7 @@
 		},
 		"display":[
 			{"type":"str","data":"Freq","x0":30,"y0":4,"size":3,"color":2,"en":1},
-			{"type":"str","data":"GHz","x0":90,"y0":36,"size":2,"color":2,"en":1},
+			{"type":"str","data":"Hz","x0":90,"y0":36,"size":2,"color":2,"en":1},
 			{"type":"base","func":4,"x0":25,"y0":36,"base":5,"class":1,"size":2,"color":1,"en":1}
 		]
 	},

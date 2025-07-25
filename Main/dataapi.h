@@ -39,6 +39,8 @@
 #define TxEth0		    "cat /sys/class/net/eth0/statistics/tx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
 #define RxWlan		    "cat /sys/class/net/wlan0/statistics/rx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
 #define TxWlan		    "cat /sys/class/net/wlan0/statistics/tx_bytes 2>/dev/null | awk '{printf ($1)/1000000000}'"
+#define Uptime		    "uptime -p | sed 's/up //' | sed 's/ days/d/' | sed 's/ hours/h/' | sed 's/ minutes/m/' | sed 's/,//g'"
+#define FanStatus	    "cat /sys/class/hwmon/hwmon1/fan1_target 2>/dev/null"
 #define BUFFSIZE		200
 
 /* 可用分辨率 */

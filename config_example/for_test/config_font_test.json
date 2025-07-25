@@ -1,0 +1,75 @@
+{
+	"seting":{
+		"pixel":12864,
+		"dev":"/dev/i2c-0",
+		"addr":60
+	},
+	"font_size_1":{
+		"seting":{
+			"cycle":5,"time":15,"page":1
+		},
+		"display":[
+			{"type":"rect","x0":0,"y0":0,"w":128,"h":64,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Font Size: 1","x0":5,"y0":5,"size":1,"color":1,"en":1},
+			{"type":"str","data":"ABCDEFGHIJKLMNOP","x0":2,"y0":15,"size":1,"color":1,"en":1},
+			{"type":"str","data":"QRSTUVWXYZ","x0":2,"y0":25,"size":1,"color":1,"en":1},
+			{"type":"str","data":"0123456789","x0":2,"y0":35,"size":1,"color":1,"en":1},
+			{"type":"str","data":"!@#$%^&*()","x0":2,"y0":45,"size":1,"color":1,"en":1},
+			{"type":"str","data":"Size 1 Test Complete","x0":2,"y0":55,"size":1,"color":1,"en":1}
+		]
+	},
+	"font_size_2":{
+		"seting":{
+			"cycle":5,"time":15,"page":2
+		},
+		"display":[
+			{"type":"rect","x0":0,"y0":0,"w":128,"h":64,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Size: 2","x0":5,"y0":2,"size":1,"color":1,"en":1},
+			{"type":"str","data":"ABCDEFGH","x0":2,"y0":12,"size":2,"color":1,"en":1},
+			{"type":"str","data":"12345","x0":2,"y0":28,"size":2,"color":1,"en":1},
+			{"type":"str","data":"Test2","x0":2,"y0":44,"size":2,"color":1,"en":1}
+		]
+	},
+	"font_size_3":{
+		"seting":{
+			"cycle":5,"time":15,"page":3
+		},
+		"display":[
+			{"type":"rect","x0":0,"y0":0,"w":128,"h":64,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Size: 3","x0":5,"y0":2,"size":1,"color":1,"en":1},
+			{"type":"str","data":"ABCD","x0":2,"y0":15,"size":3,"color":1,"en":1},
+			{"type":"str","data":"123","x0":2,"y0":40,"size":3,"color":1,"en":1}
+		]
+	},
+	"font_size_4":{
+		"seting":{
+			"cycle":5,"time":15,"page":4
+		},
+		"display":[
+			{"type":"rect","x0":0,"y0":0,"w":128,"h":64,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Size: 4","x0":5,"y0":2,"size":1,"color":1,"en":1},
+			{"type":"str","data":"ABC","x0":2,"y0":15,"size":4,"color":1,"en":1},
+			{"type":"str","data":"12","x0":2,"y0":45,"size":4,"color":1,"en":1}
+		]
+	},
+	"font_size_5":{
+		"seting":{
+			"cycle":5,"time":15,"page":5
+		},
+		"display":[
+			{"type":"rect","x0":0,"y0":0,"w":128,"h":64,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Size: 5","x0":5,"y0":2,"size":1,"color":1,"en":1},
+			{"type":"str","data":"AB","x0":2,"y0":20,"size":5,"color":1,"en":1}
+		]
+	},
+	"font_size_6":{
+		"seting":{
+			"cycle":5,"time":15,"page":6
+		},
+		"display":[
+			{"type":"rect","x0":0,"y0":0,"w":128,"h":64,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Size: 6","x0":5,"y0":2,"size":1,"color":1,"en":1},
+			{"type":"str","data":"A","x0":2,"y0":25,"size":6,"color":1,"en":1}
+		]
+	}
+}

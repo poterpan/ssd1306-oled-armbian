@@ -1,0 +1,128 @@
+{
+	"seting":{
+		"pixel":12864,
+		"dev":"/dev/i2c-0",
+		"addr":60
+	},
+	"welcome_screen":{
+		"seting":{
+			"cycle":5,"time":15,"page":1
+		},
+		"display":[
+			{"type":"r_rect","x0":5,"y0":5,"w":118,"h":54,"r":12,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"CumeBox","x0":24,"y0":15,"size":2,"color":1,"en":1},
+			{"type":"fillCircle","x0":64,"y0":40,"r":4,"color":1,"en":1},
+			{"type":"str","data":"Ready","x0":48,"y0":48,"size":1,"color":1,"en":1}
+		]
+	},
+	"cpu_dashboard":{
+		"seting":{
+			"cycle":5,"time":30,"page":2
+		},
+		"display":[
+			{"type":"r_rect","x0":3,"y0":3,"w":122,"h":58,"r":10,"fill":0,"color":1,"en":1},
+			{"type":"rect","x0":8,"y0":8,"w":112,"h":12,"fill":1,"color":1,"en":1},
+			{"type":"str","data":"CPU PERFORMANCE","x0":20,"y0":11,"size":1,"color":0,"en":1},
+			
+			{"type":"str","data":"Freq.","x0":10,"y0":28,"size":1,"color":1,"en":1},
+			{"type":"base","func":4,"class":1,"base":7,"x0":50,"y0":25,"size":2,"color":1,"en":1},
+			
+			{"type":"str","data":"Load","x0":10,"y0":45,"size":1,"color":1,"en":1},
+			{"type":"base","func":3,"base":5,"x0":50,"y0":42,"size":2,"color":1,"en":1},
+			{"type":"str","data":"%","x0":100,"y0":42,"size":2,"color":1,"en":1}
+		]
+	},
+	"thermal_fan":{
+		"seting":{
+			"cycle":5,"time":30,"page":3
+		},
+		"display":[
+			{"type":"r_rect","x0":3,"y0":3,"w":122,"h":58,"r":10,"fill":0,"color":1,"en":1},
+			{"type":"rect","x0":8,"y0":8,"w":112,"h":12,"fill":1,"color":1,"en":1},
+			{"type":"str","data":"THERMAL & COOLING","x0":13,"y0":11,"size":1,"color":0,"en":1},
+			
+			{"type":"str","data":"Temp.","x0":10,"y0":28,"size":1,"color":1,"en":1},
+			{"type":"base","func":2,"base":2,"x0":75,"y0":25,"size":2,"color":1,"en":1},
+			{"type":"str","data":"C","x0":105,"y0":25,"size":2,"color":1,"en":1},
+			
+			{"type":"str","data":"Fan Status","x0":10,"y0":45,"size":1,"color":1,"en":1},
+			{"type":"base","func":25,"base":4,"icon":1,"x0":85,"y0":42,"size":2,"color":1,"en":1}
+		]
+	},
+	"memory_info":{
+		"seting":{
+			"cycle":5,"time":30,"page":4
+		},
+		"display":[
+			{"type":"r_rect","x0":3,"y0":3,"w":122,"h":58,"r":10,"fill":0,"color":1,"en":1},
+			{"type":"rect","x0":8,"y0":8,"w":112,"h":12,"fill":1,"color":1,"en":1},
+			{"type":"str","data":"MEMORY STATUS","x0":28,"y0":11,"size":1,"color":0,"en":1},
+			
+			{"type":"str","data":"Usage","x0":10,"y0":28,"size":1,"color":1,"en":1},
+			{"type":"base","func":8,"class":1,"base":5,"x0":50,"y0":25,"size":2,"color":1,"en":1},
+			{"type":"str","data":"%","x0":80,"y0":25,"size":2,"color":1,"en":1},
+			
+			{"type":"base","func":6,"class":1,"base":4,"x0":10,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB /","x0":45,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"base","func":7,"class":1,"base":4,"x0":80,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":105,"y0":46,"size":1,"color":1,"en":1}
+		]
+	},
+	"storage_info":{
+		"seting":{
+			"cycle":5,"time":30,"page":5
+		},
+		"display":[
+			{"type":"r_rect","x0":3,"y0":3,"w":122,"h":58,"r":10,"fill":0,"color":1,"en":1},
+			{"type":"rect","x0":8,"y0":8,"w":112,"h":12,"fill":1,"color":1,"en":1},
+			{"type":"str","data":"STORAGE STATUS","x0":25,"y0":11,"size":1,"color":0,"en":1},
+			
+			{"type":"str","data":"Disk Usage","x0":10,"y0":28,"size":1,"color":1,"en":1},
+			{"type":"base","func":11,"class":1,"base":5,"x0":75,"y0":25,"size":2,"color":1,"en":1},
+			{"type":"str","data":"%","x0":105,"y0":25,"size":2,"color":1,"en":1},
+			
+			{"type":"str","data":"System Uptime","x0":10,"y0":42,"size":1,"color":1,"en":1},
+			{"type":"base","func":24,"base":12,"x0":10,"y0":51,"size":1,"color":1,"en":1}
+		]
+	},
+	"network_eth":{
+		"seting":{
+			"cycle":5,"time":30,"page":6
+		},
+		"display":[
+			{"type":"r_rect","x0":3,"y0":3,"w":122,"h":58,"r":10,"fill":0,"color":1,"en":1},
+			{"type":"rect","x0":8,"y0":8,"w":112,"h":12,"fill":1,"color":1,"en":1},
+			{"type":"str","data":"ETHERNET","x0":40,"y0":11,"size":1,"color":0,"en":1},
+			
+			{"type":"str","data":"IP Address","x0":10,"y0":25,"size":1,"color":1,"en":1},
+			{"type":"base","func":5,"port":"eth0","base":15,"x0":10,"y0":35,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"RX","x0":10,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"base","func":20,"base":6,"x0":25,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":55,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"str","data":"TX","x0":70,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"base","func":21,"base":6,"x0":85,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":115,"y0":48,"size":1,"color":1,"en":1}
+		]
+	},
+	"network_wifi":{
+		"seting":{
+			"cycle":5,"time":30,"page":7
+		},
+		"display":[
+			{"type":"r_rect","x0":3,"y0":3,"w":122,"h":58,"r":10,"fill":0,"color":1,"en":1},
+			{"type":"rect","x0":8,"y0":8,"w":112,"h":12,"fill":1,"color":1,"en":1},
+			{"type":"str","data":"WIRELESS","x0":40,"y0":11,"size":1,"color":0,"en":1},
+			
+			{"type":"str","data":"IP Address","x0":10,"y0":25,"size":1,"color":1,"en":1},
+			{"type":"base","func":5,"port":"wlan0","base":15,"x0":10,"y0":35,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"RX","x0":10,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"base","func":22,"base":6,"x0":25,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":55,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"str","data":"TX","x0":70,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"base","func":23,"base":6,"x0":85,"y0":48,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":115,"y0":48,"size":1,"color":1,"en":1}
+		]
+	}
+}

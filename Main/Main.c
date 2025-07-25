@@ -313,7 +313,7 @@ void pageDisplay(pageData *pagedata)
 							setTextColor(getJsonNumInt(dispjson,"color"));
 							setCursor(getJsonNumInt(dispjson,"x0"),getJsonNumInt(dispjson,"y0"));
 							temp = atol(buffer);
-							sprintf(buffer,"%f",(float)temp/1000);
+							sprintf(buffer,"%.0f",(float)temp/1000);  // 改為整數顯示
 							buffer[getJsonNumInt(dispjson,"base")] = '\0';
 							print_str(buffer);
 						break;
@@ -330,15 +330,20 @@ void pageDisplay(pageData *pagedata)
 							buffer[getJsonNumInt(dispjson,"base")] = '\0';
 							print_str(buffer);
 						break;
-						case 4:                 
-							getShell(buffer,FreqPath,5);
+						case 4:                 //CPU頻率
+							getShell(buffer,FreqPath,10);  // 增加緩衝區大小到10
 							setTextSize(getJsonNumInt(dispjson,"size"));
 							setTextColor(getJsonNumInt(dispjson,"color"));
 							setCursor(getJsonNumInt(dispjson,"x0"),getJsonNumInt(dispjson,"y0"));
 							if(getJsonNumInt(dispjson,"class"))
 							{
 								temp = atol(buffer);
-								sprintf(buffer,"%.1f",(float)temp/1000000);
+								// 動態選擇單位：>=1000MHz顯示GHz，否則顯示MHz
+								if(temp >= 1000000) {
+									sprintf(buffer,"%.1fG",(float)temp/1000000);
+								} else {
+									sprintf(buffer,"%.0fM",(float)temp/1000);
+								}
 							}
 							buffer[getJsonNumInt(dispjson,"base")] = '\0';
 							print_str(buffer);
@@ -388,7 +393,7 @@ void pageDisplay(pageData *pagedata)
 							if(getJsonNumInt(dispjson,"class"))
 							{
 								temp = atol(buffer);
-								sprintf(buffer,"%.1f",(float)temp);
+								sprintf(buffer,"%.0f",(float)temp);		// 改為整數顯示
 							}
 							buffer[getJsonNumInt(dispjson,"base")] = '\0';
 							print_str(buffer);
@@ -427,7 +432,7 @@ void pageDisplay(pageData *pagedata)
 							if(getJsonNumInt(dispjson,"class"))
 							{
 								temp = atol(buffer);
-								sprintf(buffer,"%.1f",(float)temp);
+								sprintf(buffer,"%.0f",(float)temp);		// 改為整數顯示
 							}
 							buffer[getJsonNumInt(dispjson,"base")] = '\0';
 							print_str(buffer);
@@ -588,6 +593,35 @@ void pageDisplay(pageData *pagedata)
 							buffer[getJsonNumInt(dispjson,"base")] = '\0';
 							print_str(buffer);
 						break;
+						case 24:                    //系統運行時間
+							getShell(buffer,Uptime,20);
+							setTextSize(getJsonNumInt(dispjson,"size"));
+							setTextColor(getJsonNumInt(dispjson,"color"));
+							setCursor(getJsonNumInt(dispjson,"x0"),getJsonNumInt(dispjson,"y0"));
+							buffer[getJsonNumInt(dispjson,"base")] = '\0';
+							print_str(buffer);
+						break;
+						case 25:                    //風扇狀態
+							getShell(buffer,FanStatus,5);
+							setTextSize(getJsonNumInt(dispjson,"size"));
+							setTextColor(getJsonNumInt(dispjson,"color"));
+							setCursor(getJsonNumInt(dispjson,"x0"),getJsonNumInt(dispjson,"y0"));
+							temp = atol(buffer);
+							if(temp > 0) {
+								sprintf(buffer,"ON");
+								// 繪製風扇開啟圖標（小圓圈）
+								if(getJsonNumInt(dispjson,"icon")) {
+									fillCircle(getJsonNumInt(dispjson,"x0")-8, getJsonNumInt(dispjson,"y0")+3, 2, 1);
+								}
+							} else {
+								sprintf(buffer,"OFF");
+								// 繪製風扇關閉圖標（空圓圈）
+								if(getJsonNumInt(dispjson,"icon")) {
+									drawCircle(getJsonNumInt(dispjson,"x0")-8, getJsonNumInt(dispjson,"y0")+3, 2, 1);
+								}
+							}
+							print_str(buffer);
+						break;
 
 						default:
 						break;
@@ -672,6 +706,21 @@ void pageDisplay(pageData *pagedata)
 						getJsonNumInt(dispjson,"r"), \
 						getJsonNumInt(dispjson,"color"));
 					}
+				}
+				else if(strcmp(datajson->valuestring,"fillCircle") == 0)
+				{
+					fillCircle(getJsonNumInt(dispjson,"x0"), \
+					getJsonNumInt(dispjson,"y0"), \
+					getJsonNumInt(dispjson,"r"), \
+					getJsonNumInt(dispjson,"color"));
+				}
+				else if(strcmp(datajson->valuestring,"fillRect") == 0)
+				{
+					fillRect(getJsonNumInt(dispjson,"x0"), \
+					getJsonNumInt(dispjson,"y0"), \
+					getJsonNumInt(dispjson,"w"), \
+					getJsonNumInt(dispjson,"h"), \
+					getJsonNumInt(dispjson,"color"));
 				}
 				else if(strcmp(datajson->valuestring,"trle") == 0)
 				{

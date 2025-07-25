@@ -1,0 +1,105 @@
+{
+	"seting":{
+		"pixel":12864,
+		"dev":"/dev/i2c-0",
+		"addr":60
+	},
+	"cpu_performance":{
+		"seting":{
+			"cycle":5,"time":30,"page":1
+		},
+		"display":[
+			{"type":"r_rect","x0":2,"y0":2,"w":124,"h":60,"r":8,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"CPU Performance","x0":20,"y0":8,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Frequency:","x0":8,"y0":22,"size":1,"color":1,"en":1},
+			{"type":"base","func":4,"class":1,"base":6,"x0":70,"y0":22,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Load:","x0":8,"y0":38,"size":1,"color":1,"en":1},
+			{"type":"base","func":3,"base":4,"x0":45,"y0":38,"size":1,"color":1,"en":1},
+			{"type":"str","data":"%","x0":70,"y0":38,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Temp:","x0":8,"y0":50,"size":1,"color":1,"en":1},
+			{"type":"base","func":2,"base":2,"x0":45,"y0":50,"size":1,"color":1,"en":1},
+			{"type":"str","data":"C","x0":65,"y0":50,"size":1,"color":1,"en":1}
+		]
+	},
+	"system_status":{
+		"seting":{
+			"cycle":5,"time":30,"page":2
+		},
+		"display":[
+			{"type":"r_rect","x0":2,"y0":2,"w":124,"h":60,"r":8,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"System Status","x0":25,"y0":8,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Fan Status:","x0":8,"y0":22,"size":1,"color":1,"en":1},
+			{"type":"base","func":25,"base":4,"icon":1,"x0":85,"y0":22,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Uptime:","x0":8,"y0":38,"size":1,"color":1,"en":1},
+			{"type":"base","func":24,"base":12,"x0":8,"y0":50,"size":1,"color":1,"en":1}
+		]
+	},
+	"memory_storage":{
+		"seting":{
+			"cycle":5,"time":30,"page":3
+		},
+		"display":[
+			{"type":"r_rect","x0":2,"y0":2,"w":124,"h":60,"r":8,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Memory & Storage","x0":15,"y0":8,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"RAM Usage:","x0":8,"y0":22,"size":1,"color":1,"en":1},
+			{"type":"base","func":8,"class":1,"base":4,"x0":95,"y0":22,"size":1,"color":1,"en":1},
+			{"type":"str","data":"%","x0":110,"y0":22,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Memory:","x0":8,"y0":36,"size":1,"color":1,"en":1},
+			{"type":"base","func":6,"class":1,"base":3,"x0":60,"y0":36,"size":1,"color":1,"en":1},
+			{"type":"str","data":"/","x0":80,"y0":36,"size":1,"color":1,"en":1},
+			{"type":"base","func":7,"class":1,"base":3,"x0":85,"y0":36,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":105,"y0":36,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"Storage:","x0":8,"y0":50,"size":1,"color":1,"en":1},
+			{"type":"base","func":11,"class":1,"base":4,"x0":65,"y0":50,"size":1,"color":1,"en":1},
+			{"type":"str","data":"% used","x0":80,"y0":50,"size":1,"color":1,"en":1}
+		]
+	},
+	"network_ethernet":{
+		"seting":{
+			"cycle":5,"time":30,"page":4
+		},
+		"display":[
+			{"type":"r_rect","x0":2,"y0":2,"w":124,"h":60,"r":8,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Ethernet Network","x0":20,"y0":8,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"ETH0 IP:","x0":8,"y0":22,"size":1,"color":1,"en":1},
+			{"type":"base","func":5,"port":"eth0","base":15,"x0":8,"y0":34,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"RX:","x0":8,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"base","func":20,"base":5,"x0":30,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":60,"y0":46,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"TX:","x0":75,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"base","func":21,"base":5,"x0":95,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":120,"y0":46,"size":1,"color":1,"en":1}
+		]
+	},
+	"network_wireless":{
+		"seting":{
+			"cycle":5,"time":30,"page":5
+		},
+		"display":[
+			{"type":"r_rect","x0":2,"y0":2,"w":124,"h":60,"r":8,"fill":0,"color":1,"en":1},
+			{"type":"str","data":"Wireless Network","x0":18,"y0":8,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"WLAN IP:","x0":8,"y0":22,"size":1,"color":1,"en":1},
+			{"type":"base","func":5,"port":"wlan0","base":15,"x0":8,"y0":34,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"RX:","x0":8,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"base","func":22,"base":5,"x0":30,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":60,"y0":46,"size":1,"color":1,"en":1},
+			
+			{"type":"str","data":"TX:","x0":75,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"base","func":23,"base":5,"x0":95,"y0":46,"size":1,"color":1,"en":1},
+			{"type":"str","data":"GB","x0":120,"y0":46,"size":1,"color":1,"en":1}
+		]
+	}
+}

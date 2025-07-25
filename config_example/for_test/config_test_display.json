@@ -1,0 +1,71 @@
+{
+	"seting":{
+		"pixel":12864,
+		"dev":"/dev/i2c-0",
+		"addr":60
+	},
+	"full_white_test":{
+		"seting":{
+			"cycle":5,"time":30,"page":1
+		},
+		"display":[
+			{"type":"fillRect","x0":0,"y0":0,"w":128,"h":64,"color":1,"en":1},
+			{"type":"str","data":"FULL WHITE TEST","x0":10,"y0":28,"size":1,"color":0,"en":1}
+		]
+	},
+	"full_black_test":{
+		"seting":{
+			"cycle":5,"time":30,"page":2
+		},
+		"display":[
+			{"type":"fillRect","x0":0,"y0":0,"w":128,"h":64,"color":0,"en":1},
+			{"type":"str","data":"FULL BLACK TEST","x0":5,"y0":28,"size":1,"color":1,"en":1}
+		]
+	},
+	"checkerboard_test":{
+		"seting":{
+			"cycle":5,"time":30,"page":3
+		},
+		"display":[
+			{"type":"fillRect","x0":0,"y0":0,"w":64,"h":32,"color":1,"en":1},
+			{"type":"fillRect","x0":64,"y0":32,"w":64,"h":32,"color":1,"en":1},
+			{"type":"str","data":"CHECKER","x0":30,"y0":28,"size":1,"color":0,"en":1}
+		]
+	},
+	"font_size_test":{
+		"seting":{
+			"cycle":5,"time":40,"page":4
+		},
+		"display":[
+			{"type":"str","data":"Size 1: Hello World","x0":2,"y0":2,"size":1,"color":1,"en":1},
+			{"type":"str","data":"Size 2: Test","x0":2,"y0":15,"size":2,"color":1,"en":1},
+			{"type":"str","data":"Size 3: Big","x0":2,"y0":35,"size":3,"color":1,"en":1},
+			{"type":"str","data":"Size 4: XL","x0":2,"y0":55,"size":4,"color":1,"en":1}
+		]
+	},
+	"pixel_grid_test":{
+		"seting":{
+			"cycle":5,"time":30,"page":5
+		},
+		"display":[
+			{"type":"line","x0":0,"y0":0,"x1":127,"y1":0,"color":1,"en":1},
+			{"type":"line","x0":0,"y0":63,"x1":127,"y1":63,"color":1,"en":1},
+			{"type":"line","x0":0,"y0":0,"x1":0,"y1":63,"color":1,"en":1},
+			{"type":"line","x0":127,"y0":0,"x1":127,"y1":63,"color":1,"en":1},
+			{"type":"line","x0":64,"y0":0,"x1":64,"y1":63,"color":1,"en":1},
+			{"type":"line","x0":0,"y0":32,"x1":127,"y1":32,"color":1,"en":1},
+			{"type":"str","data":"GRID TEST","x0":35,"y0":28,"size":1,"color":1,"en":1}
+		]
+	},
+	"dead_pixel_test":{
+		"seting":{
+			"cycle":5,"time":30,"page":6
+		},
+		"display":[
+			{"type":"fillRect","x0":0,"y0":0,"w":128,"h":64,"color":1,"en":1},
+			{"type":"fillRect","x0":10,"y0":10,"w":108,"h":44,"color":0,"en":1},
+			{"type":"str","data":"DEAD PIXEL","x0":25,"y0":20,"size":1,"color":1,"en":1},
+			{"type":"str","data":"DETECTION","x0":25,"y0":35,"size":1,"color":1,"en":1}
+		]
+	}
+}
