@@ -609,15 +609,23 @@ void pageDisplay(pageData *pagedata)
 							temp = atol(buffer);
 							if(temp > 0) {
 								sprintf(buffer,"ON");
-								// 繪製風扇開啟圖標（小圓圈）
+								// 繪製風扇開啟圖標（根據字體大小調整）
 								if(getJsonNumInt(dispjson,"icon")) {
-									fillCircle(getJsonNumInt(dispjson,"x0")-8, getJsonNumInt(dispjson,"y0")+3, 2, 1);
+									int font_size = getJsonNumInt(dispjson,"size");
+									int radius = font_size + 1;  // 字體大小 + 1
+									int offset_x = font_size * 4;  // 根據字體調整位置
+									int offset_y = font_size * 4;
+									fillCircle(getJsonNumInt(dispjson,"x0")-offset_x, getJsonNumInt(dispjson,"y0")+offset_y, radius, 1);
 								}
 							} else {
 								sprintf(buffer,"OFF");
-								// 繪製風扇關閉圖標（空圓圈）
+								// 繪製風扇關閉圖標（根據字體大小調整）
 								if(getJsonNumInt(dispjson,"icon")) {
-									drawCircle(getJsonNumInt(dispjson,"x0")-8, getJsonNumInt(dispjson,"y0")+3, 2, 1);
+									int font_size = getJsonNumInt(dispjson,"size");
+									int radius = font_size + 1;  // 字體大小 + 1
+									int offset_x = font_size * 4;  // 根據字體調整位置
+									int offset_y = font_size * 4;
+									drawCircle(getJsonNumInt(dispjson,"x0")-offset_x, getJsonNumInt(dispjson,"y0")+offset_y, radius, 1);
 								}
 							}
 							print_str(buffer);
