@@ -45,8 +45,8 @@
 			{"type":"base","func":2,"base":2,"x0":75,"y0":25,"size":2,"color":1,"en":1},
 			{"type":"str","data":"C","x0":105,"y0":25,"size":2,"color":1,"en":1},
 			
-			{"type":"str","data":"Fan Status","x0":10,"y0":45,"size":1,"color":1,"en":1},
-			{"type":"base","func":25,"base":4,"icon":1,"x0":85,"y0":42,"size":2,"color":1,"en":1}
+			{"type":"str","data":"Fan Status","x0":10,"y0":47,"size":1,"color":1,"en":1},
+			{"type":"base","func":25,"base":4,"icon":1,"x0":90,"y0":42,"size":2,"color":1,"en":1}
 		]
 	},
 	"memory_info":{
